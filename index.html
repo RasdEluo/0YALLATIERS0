@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yalla Tiers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Welcome Screen -->
+  <div id="welcome-screen">
+    <h1>Welcome to Yalla Tiers</h1>
+  </div>
+
+  <!-- Background Video -->
+  <video autoplay muted loop id="background-video">
+    <source src="assets/background.mp4" type="video/mp4" />
+  </video>
+
+  <!-- Main Content -->
+  <div id="main-content" class="hidden">
+    <header>
+      <img src="assets/logo.png" alt="Yalla Tiers Logo" id="logo" />
+      <nav>
+        <button id="login-btn">Login</button>
+        <button id="analysis-btn">Analysis</button>
+      </nav>
+    </header>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" id="close-login">&times;</span>
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username" />
+        <input type="password" id="password" placeholder="Password" />
+        <button id="submit-login">Login</button>
+      </div>
+    </div>
+
+    <!-- Analysis Modal -->
+    <div id="analysis-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" id="close-analysis">&times;</span>
+        <h2>Vehicle Analysis</h2>
+        <!-- Dropdowns -->
+        <select id="vehicle-type">
+          <option>Car</option>
+          <option>Truck</option>
+          <option>Motorcycle</option>
+        </select>
+
+        <select id="vehicle-year"></select>
+        <select id="vehicle-make"></select>
+        <select id="vehicle-model"></select>
+        <input type="text" id="vehicle-mileage" placeholder="Mileage / Hours" />
+      </div>
+    </div>
+
+    <!-- Search Section -->
+    <section id="search-section">
+      <input type="text" id="part-search" placeholder="Search for a part or product..." />
+      <button id="search-btn">Search</button>
+    </section>
+
+    <!-- Results -->
+    <section id="results"></section>
+  </div>
+
+  <!-- Scroll To Top -->
+  <button id="scroll-top">Yalla Tiers ↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
